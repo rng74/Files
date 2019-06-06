@@ -19,7 +19,9 @@
           "name": "query_text",
           "placeholder": "Search something",
           "style": {
-            "background": "#000000"
+            "background": "#e0e0e0",
+            "color": "#898888",
+            "align": "center"
           },
           "action": {
             "type": "$util.alert",
