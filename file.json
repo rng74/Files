@@ -20,8 +20,7 @@
           "placeholder": "Search something",
           "style": {
             "background": "#e0e0e0",
-            "color": "#898888",
-            "align": "center"
+            "color": "#898888"
           },
           "action": {
             "type": "$util.alert",
