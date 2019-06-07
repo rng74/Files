@@ -48,7 +48,7 @@
                   "style": {
                     "width": "50",
                     "height": "50",
-                    "background": "#00ff00",
+                    "background": "#007bff",
                     "color": "#ffffff",
                     "font": "HelveticaNeue",
                     "size": "12",
@@ -62,14 +62,13 @@
                   "type": "textfield",
                   "name": "login",
                   "value": "user1!",
-                  "placeholder": "B33ad433f00ffXd7542c1",
+                  "placeholder": "username",
                   "style": {
                     "placeholder_color": "#cecece",
                     "font": "HelveticaNeue",
                     "align": "center",
                     "width": "200",
                     "height": "60",
-                    "secure": "false",
                     "size": "12"
                   }
                 }
@@ -95,13 +94,12 @@
                   "style": {
                     "width": "50",
                     "height": "50",
-                    "background": "#00ff00",
+                    "background": "#007bff",
                     "color": "#ffffff",
                     "font": "HelveticaNeue",
                     "size": "12",
                     "corner_radius": "25"
                   },
-                  "url": "https://www.google.com",
                   "action": {
                     "trigger": "reload"
                   }
