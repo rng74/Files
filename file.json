@@ -110,11 +110,13 @@
                     "options": {
                       "url": "https://xcore.fhs.kz/v1/user/login",
                       "method": "post",
-                      "data_type": "application/json",
-                      "apikey": "52009ff562107968a258b8a91a2ed06cd5271f27",
+                      "header": {
+                        "data_type": "application/json",
+                        "apikey": "52009ff562107968a258b8a91a2ed06cd5271f27"
+                      },
                       "data": {
-                        "login": "{{$get.login}}",
-                        "password": "{{$get.password}}"
+                        "login": "user1",
+                        "password": "B33ad433f00ffXd7542c1"
                       }
                     }
                   },
