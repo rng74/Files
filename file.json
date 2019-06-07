@@ -55,7 +55,12 @@
                     "corner_radius": "4"
                   },
                   "action": {
-                    "trigger": "reload"
+                    "type": "$util.alert",
+                    "options": {
+                      "title": "Sign in",
+                      "description": "Button works",
+                      "text": "SUCCESS"
+                    }
                   }
                 },
                 {
@@ -105,6 +110,8 @@
                     "options": {
                       "url": "https://xcore.fhs.kz/v1/user/login",
                       "method": "post",
+                      "data_type": "application/json",
+                      "apikey": "52009ff562107968a258b8a91a2ed06cd5271f27",
                       "data": {
                         "login": "{{$get.login}}",
                         "password": "{{$get.password}}"
@@ -115,8 +122,14 @@
                     "type": "$util.alert",
                     "options": {
                       "title": "Sign in",
-                      "description": "Please enter username and password",
+                      "description": "Login success",
                       "text": "SUCCESS"
+                    }
+                  },
+                  "error": {
+                    "type": "$util.alert",
+                    "options": {
+                      "title": "Error setting global"
                     }
                   }
                 },
