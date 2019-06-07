@@ -43,30 +43,30 @@
               },
               "components": [
                 {
-				  "type": "$network.request",
-				  "options": {
-				    "url": "https://core.fhs.kz/v1/user/login",
-				    "method": "post",
-				    "data": {
-				      "login": "{{$get.username}}",
-				      "password": "{{$get.password}}"
-				    },
-				    "data_type": "html"
-				  },
-				  "success": {
-				    "type": "$network.request",
-				    "options": {
-				      "url": "https://demo.fhs.kz/",
-				      "data_type": "html"
-				    },
-				    "success": {
-				      "type": "$render",
-				      "options": {
-				        "type": "html"
-				      }
-				    }
-				  }
-				}
+                  "type": "$network.request",
+                  "options": {
+                    "url": "https://news.ycombinator.com/login",
+                    "method": "post",
+                    "data": {
+                      "acct": "{{$get.username}}",
+                      "pw": "{{$get.password}}"
+                    },
+                    "data_type": "html"
+                  },
+                  "success": {
+                    "type": "$network.request",
+                    "options": {
+                      "url": "https://news.ycombinator.com/saved?id={{$get.username}}",
+                      "data_type": "html"
+                    },
+                    "success": {
+                      "type": "$render",
+                      "options": {
+                        "type": "html"
+                      }
+                    }
+                  }
+                }
                 ,
                 {
                   "type": "label",
