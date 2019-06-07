@@ -43,14 +43,31 @@
               },
               "components": [
                 {
-                  "type": "label",
-                  "text": "It's ALIVE!",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier-Bold",
-                    "size": "18"
-                  }
-                },
+				  "type": "$network.request",
+				  "options": {
+				    "url": "https://core.fhs.kz/v1/user/login",
+				    "method": "post",
+				    "data": {
+				      "login": "{{$get.username}}",
+				      "password": "{{$get.password}}"
+				    },
+				    "data_type": "html"
+				  },
+				  "success": {
+				    "type": "$network.request",
+				    "options": {
+				      "url": "https://demo.fhs.kz/",
+				      "data_type": "html"
+				    },
+				    "success": {
+				      "type": "$render",
+				      "options": {
+				        "type": "html"
+				      }
+				    }
+				  }
+				}
+                ,
                 {
                   "type": "label",
                   "text": "Test build",
