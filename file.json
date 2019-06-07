@@ -43,31 +43,36 @@
               },
               "components": [
                 {
-                  "type": "$network.request",
-                  "options": {
-                    "url": "https://news.ycombinator.com/login",
-                    "method": "post",
-                    "data": {
-                      "acct": "{{$get.username}}",
-                      "pw": "{{$get.password}}"
-                    },
-                    "data_type": "html"
-                  },
-                  "success": {
-                    "type": "$network.request",
-                    "options": {
-                      "url": "https://news.ycombinator.com/saved?id={{$get.username}}",
-                      "data_type": "html"
-                    },
-                    "success": {
-                      "type": "$render",
-                      "options": {
-                        "type": "html"
-                      }
-                    }
+                  "type": "textfield",
+                  "name": "login",
+                  "value": "user1!",
+                  "placeholder": "B33ad433f00ffXd7542c1",
+                  "style": {
+                    "placeholder_color": "#cecece",
+                    "font": "HelveticaNeue",
+                    "align": "center",
+                    "width": "200",
+                    "height": "60",
+                    "secure": "true",
+                    "size": "12"
                   }
                 }
                 ,
+                {
+                  "type": "textfield",
+                  "name": "password",
+                  "value": "dhenf93f!",
+                  "placeholder": "Enter password",
+                  "style": {
+                    "placeholder_color": "#cecece",
+                    "font": "HelveticaNeue",
+                    "align": "center",
+                    "width": "200",
+                    "height": "60",
+                    "secure": "true",
+                    "size": "12"
+                  }
+                },
                 {
                   "type": "label",
                   "text": "Test build",
