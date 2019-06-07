@@ -110,6 +110,14 @@
                         "password": "{{$get.password}}"
                       }
                     }
+                  },
+                  "success": {
+                    "type": "$util.alert",
+                    "options": {
+                      "title": "Sign in",
+                      "description": "Please enter username and password",
+                      "text": "SUCCESS"
+                    }
                   }
                 },
                 {
