@@ -52,7 +52,7 @@
                     "color": "#ffffff",
                     "font": "HelveticaNeue",
                     "size": "12",
-                    "corner_radius": "25"
+                    "corner_radius": "4"
                   },
                   "action": {
                     "trigger": "reload"
@@ -61,7 +61,7 @@
                 {
                   "type": "textfield",
                   "name": "login",
-                  "value": "user1!",
+                  "value": "",
                   "placeholder": "username",
                   "style": {
                     "placeholder_color": "#cecece",
@@ -76,7 +76,7 @@
                 {
                   "type": "textfield",
                   "name": "password",
-                  "value": "dhenf93f!",
+                  "value": "",
                   "placeholder": "Enter password",
                   "style": {
                     "placeholder_color": "#cecece",
@@ -98,20 +98,34 @@
                     "color": "#ffffff",
                     "font": "HelveticaNeue",
                     "size": "12",
-                    "corner_radius": "25"
+                    "corner_radius": "4"
                   },
                   "action": {
                     "trigger": "reload"
                   }
                 },
                 {
-                  "type": "label",
-                  "text": "Test build",
-                  "style": {
-                    "align": "center",
-                    "font": "Courier",
-                    "padding": "30",
-                    "size": "14"
+                  "type": "$network.request",
+                  "options": {
+                    "url": "http://www.jasonbase.com/messages.json",
+                    "method": "post",
+                    "data": {
+                      "user_id": "fI9",
+                      "message": "Hello there"
+                    },
+                    "header": {
+                      "auth_token": "fnekfla98dls9sNFK0nf3"
+                    }
+                  },
+                  "success": {
+                    "type": "$render"
+                  },
+                  "error": {
+                    "type": "$util.alert",
+                    "options": {
+                      "title": "Error",
+                      "description": "Uh oh, something went wrong"
+                    }
                   }
                 },
                 {
