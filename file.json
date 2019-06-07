@@ -102,30 +102,10 @@
                   },
                   "action": {
                     "trigger": "reload"
-                  }
-                },
-                {
-                  "type": "$network.request",
-                  "options": {
-                    "url": "http://www.jasonbase.com/messages.json",
-                    "method": "post",
-                    "data": {
-                      "user_id": "fI9",
-                      "message": "Hello there"
-                    },
-                    "header": {
-                      "auth_token": "fnekfla98dls9sNFK0nf3"
-                    }
                   },
                   "success": {
+                    "text": "{{function testingAPI(){\nvar key = \"8a1c6a354c884c658ff29a8636fd7c18\";\nhttpGet(\"https://api.fantasydata.net/nfl/v2/JSON/PlayerSeasonStats/2015\",key    );\nalert(xmlHttp.responseText);\nvar x = 0;\n}\n\nfunction httpGet(theUrl,key)\n{\nvar xmlHttp = new XMLHttpRequest();\n\nxmlHttp.open( \"GET\", theUrl, false ); // false for synchronous request\nxmlHttp.setRequestHeader(\"Ocp-Apim-Subscription-Key\",key);\nxmlHttp.send( null );\nreturn xmlHttp.responseText;\n}}}",
                     "type": "$render"
-                  },
-                  "error": {
-                    "type": "$util.alert",
-                    "options": {
-                      "title": "Error",
-                      "description": "Uh oh, something went wrong"
-                    }
                   }
                 },
                 {
